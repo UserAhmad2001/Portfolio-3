@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass SCSS:assets --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
