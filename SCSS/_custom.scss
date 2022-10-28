@@ -5,3 +5,13 @@
     color: $sec-txt;
 }
 
+input,textarea{
+    border-radius: .5rem;
+    height: 3rem;
+    text-indent: .5rem;
+    font-size: 1.2rem;
+    border: 1px solid $sec-txt;
+    &:focus,:active{
+        outline-color: $input-brd;
+    }
+}

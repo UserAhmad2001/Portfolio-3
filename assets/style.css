@@ -3,11 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 html, body {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -146,6 +148,7 @@ header .navigation p:hover {
   width: 100%;
   height: 100%;
   padding-top: 7rem;
+  display: none;
 }
 .contact h1 {
   font-size: 3rem;
@@ -160,6 +163,9 @@ header .navigation p:hover {
 }
 .contact form .form-group {
   width: 100%;
+}
+.contact form .form-group p {
+  margin-bottom: 0.2rem;
 }
 .contact form .form-group input, .contact form .form-group textarea {
   width: 100%;
@@ -178,10 +184,26 @@ header .navigation p:hover {
 }
 .contact form .sbmt {
   grid-column: span 2;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 60, 255);
+  color: white;
+  border: none;
 }
 
 .secondary {
   color: #7F8390;
+}
+
+input, textarea {
+  border-radius: 0.5rem;
+  height: 3rem;
+  text-indent: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #7F8390;
+}
+input:focus, input :active, textarea:focus, textarea :active {
+  outline-color: rgb(0, 161, 215);
 }
 
 /*# sourceMappingURL=style.css.map */
