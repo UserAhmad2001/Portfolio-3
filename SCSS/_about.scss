@@ -1,0 +1,95 @@
+@use './variables' as *;
+
+
+.about{
+    display: flex;
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+    .bio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .bio-leng{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            width: 100%;
+            p{
+                flex-basis: 100%;
+                margin-bottom: 2.5rem;
+            }
+
+            .pnts{
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                border: 1.5px solid $pnt-bg;
+                margin: auto;
+                grid-row: 2;
+                cursor: pointer;
+                &:hover{
+                    background-color: $pnt-bg;
+                }
+            }
+            .shortest{
+                grid-row: 3;
+                margin-top: 1rem;
+                grid-column: span 2;
+                margin-right: auto;
+            }
+            .longest{
+                grid-row: 3;
+                margin-top: 1rem;
+                grid-column: span 2;
+                margin-left: auto;
+            }
+        }
+
+
+        .bio-cont{
+            width: 100%;
+            margin-block: 3rem 5rem;
+        }
+
+
+        .connect{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                margin-bottom: 1rem;
+                grid-column: span 2;
+                width: 100%;
+                text-align: center;
+            }
+
+            .img-cont{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-row: 2;
+                width: 5.5rem;
+                height: 5.5rem;
+                border-radius: 50%;
+                background-color: $pnt-bg;
+                margin-inline: 1rem;
+                cursor: pointer;
+
+                img{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

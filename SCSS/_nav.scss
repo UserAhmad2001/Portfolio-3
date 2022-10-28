@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+header{
+    margin-bottom: 8rem;
+    height: 5rem;
+    width: 100%;
+    background-color: black;
+    border-bottom: 3px solid $nav-border;
+    color: white;
+    padding-inline: 2% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .logo{
+        margin-right: auto;
+        cursor: pointer;
+    }
+
+    .navigation{
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+
+        p{
+            padding-inline: .5rem;
+            cursor: pointer;
+            transition: color .5s ease;
+            &:hover{
+                color: $home-bg;
+            }
+        }
+    }
+}

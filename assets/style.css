@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  margin-bottom: 8rem;
+  height: 5rem;
+  width: 100%;
+  background-color: black;
+  border-bottom: 3px solid #961D6E;
+  color: white;
+  padding-inline: 2% 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  margin-right: auto;
+  cursor: pointer;
+}
+header .navigation {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+header .navigation p {
+  padding-inline: 0.5rem;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+header .navigation p:hover {
+  color: #FFE742;
+}
+
+.home {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #FFE742;
+  flex-direction: column;
+  align-items: center;
+}
+.home img {
+  width: 90%;
+  max-width: 50rem;
+}
+.home .some-txt {
+  margin-top: 0.2rem;
+}
+
+.about {
+  display: flex;
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about .bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .bio .bio-leng {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  width: 100%;
+}
+.about .bio .bio-leng p {
+  flex-basis: 100%;
+  margin-bottom: 2.5rem;
+}
+.about .bio .bio-leng .pnts {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1.5px solid #FF87D7;
+  margin: auto;
+  grid-row: 2;
+  cursor: pointer;
+}
+.about .bio .bio-leng .pnts:hover {
+  background-color: #FF87D7;
+}
+.about .bio .bio-leng .shortest {
+  grid-row: 3;
+  margin-top: 1rem;
+  grid-column: span 2;
+  margin-right: auto;
+}
+.about .bio .bio-leng .longest {
+  grid-row: 3;
+  margin-top: 1rem;
+  grid-column: span 2;
+  margin-left: auto;
+}
+.about .bio .bio-cont {
+  width: 100%;
+  margin-block: 3rem 5rem;
+}
+.about .bio .connect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.about .bio .connect p {
+  margin-bottom: 1rem;
+  grid-column: span 2;
+  width: 100%;
+  text-align: center;
+}
+.about .bio .connect .img-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 2;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background-color: #FF87D7;
+  margin-inline: 1rem;
+  cursor: pointer;
+}
+.about .bio .connect .img-cont img {
+  width: 60%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 7rem;
+}
+.contact h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.contact form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  max-width: 40rem;
+  gap: 1rem;
+}
+.contact form .form-group {
+  width: 100%;
+}
+.contact form .form-group input, .contact form .form-group textarea {
+  width: 100%;
+}
+.contact form .email {
+  grid-row: 2;
+  grid-column: span 2;
+}
+.contact form .message {
+  grid-row: 3;
+  grid-column: span 2;
+}
+.contact form .message textarea {
+  padding: 0.5rem;
+  height: 9rem;
+}
+.contact form .sbmt {
+  grid-column: span 2;
+}
+
+.secondary {
+  color: #7F8390;
+}
+
+/*# sourceMappingURL=style.css.map */
