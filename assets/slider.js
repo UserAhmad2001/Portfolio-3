@@ -1,4 +1,5 @@
 var pos = 0;
+var highestPos = document.querySelector(".projects").children.length / 2;
 
 var leftArrow = document.querySelector(".left-arrow")
 var rightArrow = document.querySelector(".right-arrow")
@@ -31,4 +32,10 @@ function arrowClick(ev){
                 el.style.transform = `translateX(${pos*100}%)`
             })
         }
+
+        setThreeDEffect();
+}
+
+function setThreeDEffect(){
+    
 }

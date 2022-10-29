@@ -45,7 +45,7 @@ header .navigation p:hover {
 }
 
 .home {
-  display: none;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: #FFE742;
