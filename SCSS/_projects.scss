@@ -1,2 +1,44 @@
+@use './variables' as *;
 
+.projects{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
 
+    .projects-cont{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        .project{
+            width: 50rem;
+            transition: transform .5s ease;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .right-arrow,.left-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        cursor: pointer;
+        width: 4rem;
+        padding: 1rem;
+        padding-right: 0;
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.434);
+    }
+    .right-arrow{
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    .left-arrow{
+        left: 0%;
+    }
+}
