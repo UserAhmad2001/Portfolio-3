@@ -46,11 +46,12 @@ header .navigation p:hover {
 
 .home {
   display: flex;
+  position: relative;
   width: 100%;
-  height: 100%;
-  background-color: #FFE742;
+  height: 95%;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 .home img {
   width: 90%;
@@ -59,15 +60,33 @@ header .navigation p:hover {
 .home .some-txt {
   margin-top: 0.2rem;
 }
+.home .refresh {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+.home canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
 
 .about {
   display: flex;
-  display: none;
   width: 100%;
   height: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  column-gap: 10rem;
 }
 .about .bio {
   display: flex;
@@ -92,6 +111,12 @@ header .navigation p:hover {
   margin: auto;
   grid-row: 2;
   cursor: pointer;
+}
+.about .bio .bio-leng .pnts:first-child {
+  margin-left: 0;
+}
+.about .bio .bio-leng .pnts:last-child {
+  margin-right: 0;
 }
 .about .bio .bio-leng .pnts:hover {
   background-color: #FF87D7;
@@ -141,6 +166,35 @@ header .navigation p:hover {
 .about .bio .connect .img-cont img {
   width: 60%;
 }
+.about .images {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: center;
+}
+.about .images img {
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.about .images .image-changer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.about .images .image-changer img {
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  cursor: pointer;
+}
+.about .images .image-changer img:first-child {
+  margin-left: 0;
+}
+.about .images .image-changer img:last-child {
+  margin-right: 0;
+}
 
 .projects {
   display: flex;
@@ -148,6 +202,7 @@ header .navigation p:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
+  display: none;
 }
 .projects .projects-cont {
   display: flex;
@@ -250,6 +305,20 @@ input:focus, input :active, textarea:focus, textarea :active {
 .title {
   font-size: 5rem;
   margin-bottom: 1rem;
+}
+
+.rotateBtn {
+  animation: rotateBtn 1s ease forwards;
+  transform-origin: center;
+}
+
+@keyframes rotateBtn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

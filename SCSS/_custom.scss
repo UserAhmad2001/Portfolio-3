@@ -20,3 +20,17 @@ input,textarea{
     font-size: 5rem;
     margin-bottom: 1rem;
 }
+
+.rotateBtn{
+    animation: rotateBtn 1s ease forwards;
+    transform-origin: center;
+}
+
+@keyframes rotateBtn {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
