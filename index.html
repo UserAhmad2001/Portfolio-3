@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmad Manaa | Front-end web developer</title>
     <link rel="stylesheet" href="./assets/style.css">
-    <!-- <script src="./assets/slider.js" type="text/javascript" defer></script>   
+    <script src="./assets/slider.js" type="text/javascript" defer></script>   
     <script src="./node_modules/matter-js/build/matter.min.js" type="text/javascript" defer></script>
-    <script src="./assets/boop_object.js" type="text/javascript" defer></script>     -->
+    <script src="./assets/boop_object.js" type="text/javascript" defer></script>    
     <script src="./assets/profile-image-slider.js" type="text/javascript" defer></script>
 </head>
 <body>
@@ -18,9 +18,9 @@
         <header>
             <h1 class="logo">Ahmad Manaa</h1>
             <nav class="navigation">
-                <p>About</p>
-                <p>Projects</p>
-                <p>Contact</p>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contct">Contact</a>
                 <div class="head">
                     <img src="" alt="head image">
                 </div>
@@ -34,29 +34,38 @@
 
 
     <!-- THIS IS THE ABOUT SECTION -->
-    <section class="about">
+    <section id="about">
         <div class="bio">
             <div class="bio-leng">
-                <p class="secondary">ADJUST BIO LENGTH:</p>
-                <div class="pnts" order="0"></div>
-                <div class="pnts" order="1"></div>
-                <div class="pnts" order="2"></div>
-                <div class="pnts" order="3"></div>
-                <div class="shortest secondary">SHORTEST</div>
-                <div class="longest secondary">LONGEST</div>
+                <p class="secondary bio-length-title">ADJUST BIO LENGTH:</p>
+                <div class="points">
+                    <div class="pnts" order="0"></div>
+                    <div class="pnts" order="1"></div>
+                    <div class="pnts" order="2"></div>
+                    <div class="pnts" order="3"></div>
+                </div>
+                <p class="shortest secondary">shortest</p>
+                <p class="longest secondary">longest</p>
             </div>
-            <p class="bio-cont"><b>Ahmad Manaa</b> is trying his very best.</p>
+
+            <p class="bio-cont"><span class="conc">Ahmad ManaaA</span> is trying his very best.</p>
+
             <div class="connect">
                 <p class="secondary">CONNECT WITH AHMAD:</p>
-                <div class="img-cont"><img src="./assets/linkedin.png" alt="Linkedin image"></div>
-                <div class="img-cont"><img src="./assets/github.png" alt="Github image"></div>
+                <a href="#" class="social-media-icons"><img src="./assets/linkedin.png" alt="Linkedin image"></a>
+                <a href="#" class="social-media-icons"><img src="./assets/github.png" alt="Github image"></a>
             </div>
         </div>
 
         <div class="images">
             <img class="profile-image" src="./assets/my image1.jpg" alt="my main image">
+            <div class="image-links">
+                <a href="./assets/my image1.jpg" target="_blank" class="full-image-link">see full image</a>
+            </div>
             <div class="image-changer">
                 <img src="./assets/my image1.jpg" alt="my image" class="img-changer-item">
+                <img src="./assets/my image2.jpg" alt="my image" class="img-changer-item">
+                <img src="./assets/my image3.jpg" alt="my image" class="img-changer-item">
                 <img src="./assets/my image2.jpg" alt="my image" class="img-changer-item">
                 <img src="./assets/my image3.jpg" alt="my image" class="img-changer-item">
             </div>
@@ -67,7 +76,7 @@
 
 
     <!-- THIS IS THE PROJECTS SECTION -->
-    <section class="projects">
+    <section id="projects">
         <h1 class="title">PROJECTS</h1>
         <div class="projects-cont">
             <div class="project" order="0">
@@ -93,7 +102,7 @@
 
 
     <!-- THIS IS THE CONTACT SECTION -->
-    <section class="contact">
+    <section id="contact">
         <h1 class="title">DROP ME A FEEDBACK:</h1>
         <form>
             <div class="form-group name">

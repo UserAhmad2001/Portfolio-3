@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Roboto, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 html, body {
@@ -35,12 +36,14 @@ header .navigation {
   display: flex;
   flex-direction: row;
 }
-header .navigation p {
+header .navigation a {
   padding-inline: 0.5rem;
   cursor: pointer;
   transition: color 0.5s ease;
+  text-decoration: none;
+  color: white;
 }
-header .navigation p:hover {
+header .navigation a:hover {
   color: #FFE742;
 }
 
@@ -51,7 +54,6 @@ header .navigation p:hover {
   height: 95%;
   flex-direction: column;
   align-items: center;
-  display: none;
 }
 .home img {
   width: 90%;
@@ -79,124 +81,171 @@ header .navigation p:hover {
   z-index: -1;
 }
 
-.about {
+#about {
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 10rem;
+  padding-block: 5rem;
 }
-.about .bio {
+#about .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  flex-basis: 50%;
+  margin: auto;
 }
-.about .bio .bio-leng {
+#about .bio .bio-leng {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
-  width: 100%;
+  width: 70%;
+  max-width: 20rem;
 }
-.about .bio .bio-leng p {
-  flex-basis: 100%;
+#about .bio .bio-leng p {
+  font-size: 0.8rem;
+}
+#about .bio .bio-leng .bio-length-title {
+  grid-column: span 2;
   margin-bottom: 2.5rem;
 }
-.about .bio .bio-leng .pnts {
-  width: 1.5rem;
-  height: 1.5rem;
+#about .bio .bio-leng .points {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  grid-row: 2;
+  grid-column: span 4;
+  column-gap: 25%;
+}
+#about .bio .bio-leng .points .pnts {
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 50%;
   border: 1.5px solid #FF87D7;
-  margin: auto;
-  grid-row: 2;
   cursor: pointer;
 }
-.about .bio .bio-leng .pnts:first-child {
-  margin-left: 0;
-}
-.about .bio .bio-leng .pnts:last-child {
-  margin-right: 0;
-}
-.about .bio .bio-leng .pnts:hover {
+#about .bio .bio-leng .points .pnts:hover {
   background-color: #FF87D7;
 }
-.about .bio .bio-leng .shortest {
+#about .bio .bio-leng .shortest {
   grid-row: 3;
   margin-top: 1rem;
   grid-column: span 2;
   margin-right: auto;
+  font-variant-: normal;
 }
-.about .bio .bio-leng .longest {
+#about .bio .bio-leng .longest {
   grid-row: 3;
   margin-top: 1rem;
   grid-column: span 2;
   margin-left: auto;
 }
-.about .bio .bio-cont {
-  width: 100%;
+#about .bio .bio-cont {
+  width: 35rem;
   margin-block: 3rem 5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
 }
-.about .bio .connect {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+#about .bio .bio-cont .conc {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
-.about .bio .connect p {
+#about .bio .connect {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: auto;
+  width: 50%;
+}
+#about .bio .connect p {
   margin-bottom: 1rem;
   grid-column: span 2;
   width: 100%;
   text-align: center;
 }
-.about .bio .connect .img-cont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-row: 2;
+#about .bio .connect .social-media-icons {
+  display: inline;
   width: 5.5rem;
   height: 5.5rem;
+  cursor: pointer;
   border-radius: 50%;
   background-color: #FF87D7;
-  margin-inline: 1rem;
-  cursor: pointer;
+  padding: 1rem;
+  margin: auto;
 }
-.about .bio .connect .img-cont img {
-  width: 60%;
+#about .bio .connect .social-media-icons img {
+  width: 100%;
+  height: 100%;
 }
-.about .images {
+#about .images {
   display: flex;
   flex-direction: column;
-  flex-basis: 30%;
   align-items: center;
-}
-.about .images img {
   width: 100%;
+  max-width: 30rem;
+  margin: auto;
+}
+#about .images img {
+  width: 30rem;
   height: 30rem;
-  margin-bottom: 1rem;
   object-fit: cover;
 }
-.about .images .image-changer {
-  display: flex;
-  flex-direction: row;
+#about .images .image-links {
+  margin-block: 1rem;
   width: 100%;
 }
-.about .images .image-changer img {
+#about .images .image-changer {
+  display: flex;
+  flex-direction: row;
+  width: 30rem;
+}
+#about .images .image-changer img {
   width: 4rem;
   height: 4rem;
   margin: auto;
   cursor: pointer;
 }
-.about .images .image-changer img:first-child {
+#about .images .image-changer img:first-child {
   margin-left: 0;
 }
-.about .images .image-changer img:last-child {
+#about .images .image-changer img:last-child {
   margin-right: 0;
 }
 
-.projects {
+@media (max-width: 954px) {
+  #about {
+    height: fit-content;
+    flex-direction: column;
+  }
+  #about .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 5rem;
+  }
+  #about .bio .bio-leng {
+    width: 70%;
+    max-width: 30rem;
+  }
+  #about .bio .bio-cont .conc {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  #about .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 5rem auto;
+  }
+}
+#projects {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -204,19 +253,19 @@ header .navigation p:hover {
   padding-top: 5rem;
   display: none;
 }
-.projects .projects-cont {
+#projects .projects-cont {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-.projects .projects-cont .project {
+#projects .projects-cont .project {
   width: 50rem;
   transition: transform 0.5s ease;
 }
-.projects .projects-cont .project img {
+#projects .projects-cont .project img {
   width: 100%;
 }
-.projects .right-arrow, .projects .left-arrow {
+#projects .right-arrow, #projects .left-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,15 +278,15 @@ header .navigation p:hover {
   top: 50%;
   background-color: rgba(0, 0, 0, 0.434);
 }
-.projects .right-arrow {
+#projects .right-arrow {
   left: 100%;
   transform: translateX(-100%);
 }
-.projects .left-arrow {
+#projects .left-arrow {
   left: 0%;
 }
 
-.contact {
+#contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,39 +295,39 @@ header .navigation p:hover {
   padding-top: 7rem;
   display: none;
 }
-.contact h1 {
+#contact h1 {
   font-size: 3rem;
   margin-bottom: 3rem;
 }
-.contact form {
+#contact form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 90%;
   max-width: 40rem;
   gap: 1rem;
 }
-.contact form .form-group {
+#contact form .form-group {
   width: 100%;
 }
-.contact form .form-group p {
+#contact form .form-group p {
   margin-bottom: 0.2rem;
 }
-.contact form .form-group input, .contact form .form-group textarea {
+#contact form .form-group input, #contact form .form-group textarea {
   width: 100%;
 }
-.contact form .email {
+#contact form .email {
   grid-row: 2;
   grid-column: span 2;
 }
-.contact form .message {
+#contact form .message {
   grid-row: 3;
   grid-column: span 2;
 }
-.contact form .message textarea {
+#contact form .message textarea {
   padding: 0.5rem;
   height: 9rem;
 }
-.contact form .sbmt {
+#contact form .sbmt {
   grid-column: span 2;
   height: 2.5rem;
   border-radius: 0.5rem;
