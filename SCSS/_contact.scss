@@ -6,22 +6,23 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-top: 7rem;
+    padding-top: 5rem;
+    background-color: $home-bg ;
     display: none;
-
-
+    
     h1{
-        font-size: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+        font-size: min(5rem, 7vw );
     }
-
+    
 
     form{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 90%;
         max-width: 40rem;
-        gap: 1rem;
+        row-gap: 2rem;
+        column-gap: 1rem;
 
         .form-group{
             width: 100%;
@@ -42,8 +43,8 @@
             grid-row: 3;
             grid-column: span 2;
             textarea{
-                padding: .5rem;
                 height: 9rem;
+                padding-block: .5rem;
             }
         }
 
@@ -52,8 +53,14 @@
             height: 2.5rem;
             border-radius: .5rem;
             background-color: $btn-bg;
+            transition: background .3s ease;
             color: white;
             border: none;
+            cursor: pointer;
+
+            &:hover,:focus,:focus-within{
+                background: rgb(0, 42, 179);
+            }
         }
 
     }

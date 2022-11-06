@@ -1,4 +1,5 @@
 function mouseOver(ev){
+    ev.stopPropagation();
     var audio = new Audio('./assets/boop.wav')
     audio.play();
     if(ev.target.classList.contains('img-changer-item')){

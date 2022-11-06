@@ -1,5 +1,5 @@
 var pos = 0;
-var highestPos = document.querySelector(".projects").children.length / 2;
+var highestPos = document.querySelector("#projects").children.length / 2;
 
 var leftArrow = document.querySelector(".left-arrow")
 var rightArrow = document.querySelector(".right-arrow")
@@ -21,13 +21,13 @@ function arrowClick(ev){
             })
         }
         else if(pos===2){
-            pos=0
+            pos=-2
             projects.forEach(el=>{
                 el.style.transform = `translateX(${pos*100}%)`
             })
         }
         else if(pos===-2){
-            pos=0
+            pos=2
             projects.forEach(el=>{
                 el.style.transform = `translateX(${pos*100}%)`
             })

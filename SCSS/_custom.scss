@@ -6,15 +6,17 @@
 }
 
 input,textarea{
-    border-radius: .5rem;
+    border-radius: .4rem;
     height: 3rem;
-    text-indent: .5rem;
+    text-indent: 1rem;
     font-size: 1.2rem;
     border: 1px solid $sec-txt;
     &:focus,:active{
         outline-color: $input-brd;
+        border-color: $input-brd;
     }
 }
+
 
 .title{
     font-size: 5rem;
