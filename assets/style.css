@@ -54,7 +54,6 @@ header .navigation a:hover {
   height: 95%;
   flex-direction: column;
   align-items: center;
-  display: none;
 }
 .home img {
   width: 90%;
@@ -68,9 +67,7 @@ header .navigation a:hover {
   height: 3rem;
   position: absolute;
   cursor: pointer;
-  background-color: white;
   padding: 0.5rem;
-  border-radius: 3rem;
   left: 50%;
   top: 90%;
   transform: translate(-50%, -50%);
@@ -253,6 +250,7 @@ header .navigation a:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 5rem;
+  display: none;
 }
 #projects .projects-cont {
   display: flex;

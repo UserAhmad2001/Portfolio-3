@@ -22,7 +22,7 @@ var render = Render.create({
 });
 
 // create two boxes and a ground
-var ground = Bodies.rectangle(innerWidth/2, innerHeight, innerWidth, 1, { isStatic: true, render:{fillStyle:"#FFE742"} });
+var ground = Bodies.rectangle(innerWidth/2, innerHeight, innerWidth, 10, { isStatic: true, render:{fillStyle:"#FFE742"} });
 var rightWall = Bodies.rectangle(innerWidth+1, innerHeight/2, 1, innerHeight, { isStatic: true, render:{fillStyle:"#FFE742"} });
 var leftWall = Bodies.rectangle(0, innerHeight/2, 1, innerHeight, { isStatic: true, render:{fillStyle:"#FFE742"} });
 
@@ -56,10 +56,12 @@ ref.addEventListener('click',(ev)=>{
     }
     document.querySelector('.some-txt').setAttribute("src",locations[ind])
     var rand = (Math.random()*innerWidth);
-    World.add(engine.world,[Bodies.circle(rand,20,30,{
+    World.add(engine.world,[Bodies.polygon(rand,20,6,30,{
         render:{
             sprite:{
                 texture:'./assets/boop.svg',
+                yScale: 1/2,
+                xScale: 1/2
             }
         }
     })])
