@@ -24,7 +24,7 @@ input,textarea{
 }
 
 .rotateBtn{
-    animation: rotateBtn 1s ease forwards;
+    animation: rotateBtn .3s ease forwards;
     transform-origin: center;
 }
 
@@ -35,4 +35,12 @@ input,textarea{
     100%{
         transform: translate(-50%, -50%) rotate(-360deg);
     }
+}
+
+
+section:not(.home){
+    padding-block: 10rem;
+}
+#contact{
+    margin-bottom: 0;
 }

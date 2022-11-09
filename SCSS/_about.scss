@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
     padding-block: 5rem;
-    display: none;
 
 
     .bio{
@@ -16,8 +15,8 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        flex-basis: 50%;
         margin: auto;
+        flex-basis: 30%;
 
         .bio-leng{
             display: grid;
@@ -50,7 +49,7 @@
                     border-radius: 50%;
                     border: 1.5px solid $pnt-bg;
                     cursor: pointer;
-                    &:hover{
+                    &:hover,&:focus{
                         background-color: $pnt-bg;
                     }
                 }
@@ -127,7 +126,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 90%;
         max-width: 30rem;
         margin: auto;
 
