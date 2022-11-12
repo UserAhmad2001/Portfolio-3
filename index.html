@@ -10,12 +10,12 @@
     <script src="./assets/boop_object.js" type="text/javascript" defer></script>    
     <script src="./assets/profile-image-slider.js" type="text/javascript" defer></script>
 </head>
-<body>
+<body id="root">
     <!-- THIS IS THE HOME SECTION -->
-    <section class="home">
+    <section class="home" class="section">
         <!-- THIS IS THE NAVIGATION BAR -->
         <header>
-            <h1 class="logo">Ahmad Manaa</h1>
+            <img src="./assets/logo.svg" alt="my logo" class="logo">
             <nav class="navigation">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
@@ -33,15 +33,16 @@
 
 
     <!-- THIS IS THE ABOUT SECTION -->
-    <section id="about">
+    <section id="about" class="section">
+        <h1 class="title">About Me</h1>
         <div class="bio">
             <div class="bio-leng">
                 <p class="secondary bio-length-title">ADJUST BIO LENGTH:</p>
                 <div class="points">
-                    <div class="pnts" tabindex="0" order="0"></div>
-                    <div class="pnts" tabindex="0" order="1"></div>
-                    <div class="pnts" tabindex="0" order="2"></div>
-                    <div class="pnts" tabindex="0" order="3"></div>
+                    <div class="pnts selected-pnt" order="0"></div>
+                    <div class="pnts" order="1"></div>
+                    <div class="pnts" order="2"></div>
+                    <div class="pnts" order="3"></div>
                 </div>
                 <p class="shortest secondary">shortest</p>
                 <p class="longest secondary">longest</p>
@@ -69,75 +70,93 @@
 
 
     <!-- THIS IS THE PROJECTS SECTION -->
-    <div id="projects">
+    <section id="projects" class="section">
         <h1 class="title">Projects</h1>
         <div class="project">
             <div class="project-content">
                 <div class="project-name">Dynamic TODO Web App</div>
-                <div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nobis!</div>
+                <div class="project-description">Dynamic TODO web app with light and Dark mode, created using React.JS and added
+                    some functionality to it using third-party libraries.</div>
                 <div class="project-tags">
                     <span class="tag">VS code</span>
+                    <span class="tag">React JS</span>
+                    <span class="tag">SASS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Webpack</span>
                 </div>
                 <div class="links">
                     <a href="https://userahmad2001.github.io/todo-app/"><img src="./assets/link.svg" alt="link to live website"></a>
                     <a href="https://github.com/UserAhmad2001/todo-app"><img src="./assets/github.svg" alt="link yo github repository"></a>
                 </div>
             </div>
-            <img src="./assets/todo-project.jpg" alt="project image" class="project-image">
+            <img src="./assets/todo-project.jpg" alt="project image" class="project-image lazyLoad">
         </div>
 
-        <div class="project">
+        <div class="project reverse">
             <div class="project-content">
                 <div class="project-name">Rock Paper Scissors Web Game</div>
-                <div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nobis!</div>
+                <div class="project-description">Rock Paper Scissors web game created using HTML as a base, 
+                    Vanilla JavaScript for logic and SCSS for styling.</div>
                 <div class="project-tags">
                     <span class="tag">VS code</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">SASS</span>
+                    <span class="tag">JavaScript</span>
                 </div>
                 <div class="links">
                     <a href="https://userahmad2001.github.io/rock_paper_scissors_game/"><img src="./assets/link.svg" alt="link to live website"></a>
                     <a href="https://github.com/UserAhmad2001/rock_paper_scissors_game"><img src="./assets/github.svg" alt="link yo github repository"></a>
                 </div>
             </div>
-            <img src="./assets/rps.jpg" alt="project image" class="project-image">
+            <img src="./assets/rps.jpg" alt="project image" class="project-image lazyLoad">
         </div>
 
         <div class="project">
             <div class="project-content">
                 <div class="project-name">Responsive Work From Home Website Landing Page</div>
-                <div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nobis!</div>
+                <div class="project-description">Responsive Remote Work Website Landing page created using HTML, SCSS, and 
+                    JavaScript and made Mobile-friendly with media queries and adaptive CSS units.</div>
                 <div class="project-tags">
                     <span class="tag">VS code</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">SASS</span>
+                    <span class="tag">JavaScript</span>
                 </div>
                 <div class="links">
                     <a href="https://userahmad2001.github.io/Remote_Work_Website/"><img src="./assets/link.svg" alt="link to live website"></a>
                     <a href="https://github.com/UserAhmad2001/Remote_Work_Website"><img src="./assets/github.svg" alt="link yo github repository"></a>
                 </div>
             </div>
-            <img src="./assets/work-from-home.jpg" alt="project image" class="project-image">
+            <img src="./assets/work-from-home.jpg" alt="project image" class="project-image lazyLoad">
         </div>
 
-        <div class="project">
+        <div class="project reverse">
             <div class="project-content">
                 <div class="project-name">Calculator Web App</div>
-                <div class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, nobis!</div>
+                <div class="project-description">Calculator web app with multiple themes created using HTML as a base, 
+                    Vanilla JavaScript for logic and SCSS for styling, made responsive using
+                    CSS media queries.</div>
                 <div class="project-tags">
                     <span class="tag">VS code</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">SASS</span>
+                    <span class="tag">JavaScript</span>
                 </div>
                 <div class="links">
                     <a href="https://userahmad2001.github.io/Calculator_App/"><img src="./assets/link.svg" alt="link to live website"></a>
                     <a href="https://github.com/UserAhmad2001/Calculator_App"><img src="./assets/github.svg" alt="link yo github repository"></a>
                 </div>
             </div>
-            <img src="./assets/calc.jpg" alt="project image" class="project-image">
+            <img src="./assets/calc.jpg" alt="project image" class="project-image lazyLoad">
         </div>
 
 
-    </div>
+    </section>
 
 
 
     <!-- THIS IS THE CONTACT SECTION -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="title">DROP ME A MESSAGE</h1>
         <form action="https://formbold.com/s/oWzq3" method="POST">
             <div class="form-group name">

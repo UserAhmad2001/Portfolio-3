@@ -56,7 +56,7 @@ ref.addEventListener('click',(ev)=>{
     }
     document.querySelector('.some-txt').setAttribute("src",locations[ind])
     var rand = (Math.random()*innerWidth);
-    World.add(engine.world,[Bodies.polygon(rand,20,6,30,{
+    World.add(engine.world,[Bodies.polygon(rand,20,7,32,{
         render:{
             sprite:{
                 texture:'./assets/boop.svg',

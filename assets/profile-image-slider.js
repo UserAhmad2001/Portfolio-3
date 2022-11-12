@@ -29,9 +29,24 @@ var txt = [
     '<span class="conc">Ahmad ManaaA</span> is a creative web developer experienced in building highly-Interactive web applications.',
     '<span class="conc">Ahmad manaa</span> has experience using and working with the adobe suite, he has an eye for crafting beautiful responsive UI/UX designs and can use this to help your company.'
 ]
-
-document.querySelectorAll('.pnts').forEach(el=>{
+var points = document.querySelectorAll('.pnts');
+points.forEach(el=>{
     el.addEventListener('click', ev => {
         document.querySelector('.bio-cont').innerHTML = txt[ev.target.getAttribute('order')]
+        points.forEach(el=>{
+            if(el.classList.contains('selected-pnt')){
+                el.classList.remove('selected-pnt')
+            }
+        })
+        ev.target.classList.add('selected-pnt');
     })
 })
+
+
+// THIS IS THE LAZY LOADING SECTION
+let options = {
+    root: document.querySelector('#root'),
+    rootMargin: '0px',
+    threshold: 1.0
+  }
+

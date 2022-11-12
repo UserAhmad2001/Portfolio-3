@@ -1,0 +1,48 @@
+@use './variables' as *;
+@media (max-width:975px) {
+    #projects{
+        .title{
+            text-align: center;
+            font-size: min(6rem, 15vw);
+            text-transform: uppercase;
+        }
+    
+        .project,.reverse{
+            flex-direction: column-reverse;
+            row-gap: 3rem;
+            
+            .project-content{
+                width: 100%;
+                row-gap: 1.5rem;
+    
+                .project-name{
+                    text-align: center;
+                    font-size: min(4rem, 10vw);
+                }
+                .project-description{
+                    color: rgb(167, 167, 167);
+                    transform: scale(1);
+                    background-color: transparent;
+                    text-align: center;
+                    padding: .5rem 1rem;
+                }
+                .project-tags{
+                    margin: auto;
+                }
+                .links{
+                    margin: auto;
+                }
+            }
+            
+            img{
+                width: 100%;
+            }
+        }
+        
+        .reverse{
+            flex-direction: column-reverse;
+        }
+    
+    
+    }
+}
