@@ -24,9 +24,9 @@ document.querySelectorAll('.social-media-icons').forEach(el=>{
 
 // About section text controller
 var txt = [
-    '<span class="conc">Ahmad ManaaA</span> is trying his very best.',
+    '<span class="conc">Ahmad Manaa</span> is trying his very best.',
     '<span class="conc">Ahmad Manaa</span> is skilled in all stages of web development from designing to deploying the website.',
-    '<span class="conc">Ahmad ManaaA</span> is a creative web developer experienced in building highly-Interactive web applications.',
+    '<span class="conc">Ahmad Manaa</span> is a creative web developer experienced in building highly-Interactive web applications.',
     '<span class="conc">Ahmad manaa</span> has experience using and working with the adobe suite, he has an eye for crafting beautiful responsive UI/UX designs and can use this to help your company.'
 ]
 var points = document.querySelectorAll('.pnts');
