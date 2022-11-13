@@ -48,6 +48,9 @@ header .navigation a {
 header .navigation a:hover {
   color: #FFE742;
 }
+header .navigation .head {
+  display: none;
+}
 
 .home {
   display: flex;
@@ -85,19 +88,23 @@ header .navigation a:hover {
   display: flex;
   width: 100%;
   height: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-block: 5rem;
-  flex-wrap: wrap;
 }
 #about .title {
-  position: relative;
-  flex-basis: 100%;
   text-align: center;
   margin-bottom: 7rem;
 }
-#about .bio {
+#about .bio-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+}
+#about .bio-image .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,21 +112,21 @@ header .navigation a:hover {
   margin: auto;
   flex-basis: 30%;
 }
-#about .bio .bio-leng {
+#about .bio-image .bio .bio-leng {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   width: 70%;
   max-width: 20rem;
 }
-#about .bio .bio-leng p {
+#about .bio-image .bio .bio-leng p {
   font-size: 0.8rem;
 }
-#about .bio .bio-leng .bio-length-title {
+#about .bio-image .bio .bio-leng .bio-length-title {
   grid-column: span 2;
   margin-bottom: 2.5rem;
 }
-#about .bio .bio-leng .points {
+#about .bio-image .bio .bio-leng .points {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -128,56 +135,56 @@ header .navigation a:hover {
   grid-column: span 4;
   column-gap: 25%;
 }
-#about .bio .bio-leng .points .pnts {
+#about .bio-image .bio .bio-leng .points .pnts {
   width: 1.1rem;
   height: 1.1rem;
   border-radius: 50%;
   border: 1.5px solid #FF87D7;
   cursor: pointer;
 }
-#about .bio .bio-leng .points .pnts:hover {
+#about .bio-image .bio .bio-leng .points .pnts:hover {
   background-color: #FF87D7;
 }
-#about .bio .bio-leng .points .selected-pnt {
+#about .bio-image .bio .bio-leng .points .selected-pnt {
   background-color: #FF87D7;
 }
-#about .bio .bio-leng .shortest {
+#about .bio-image .bio .bio-leng .shortest {
   grid-row: 3;
   margin-top: 1rem;
   grid-column: span 2;
   margin-right: auto;
   font-variant-: normal;
 }
-#about .bio .bio-leng .longest {
+#about .bio-image .bio .bio-leng .longest {
   grid-row: 3;
   margin-top: 1rem;
   grid-column: span 2;
   margin-left: auto;
 }
-#about .bio .bio-cont {
+#about .bio-image .bio .bio-cont {
   width: 35rem;
   margin-block: 3rem 5rem;
   font-size: 1.8rem;
   font-weight: 400;
   text-align: center;
 }
-#about .bio .bio-cont .conc {
+#about .bio-image .bio .bio-cont .conc {
   font-size: 1.8rem;
   color: rgb(0, 60, 255);
 }
-#about .bio .connect {
+#about .bio-image .bio .connect {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   margin: auto;
   width: 50%;
 }
-#about .bio .connect p {
+#about .bio-image .bio .connect p {
   margin-bottom: 1rem;
   grid-column: span 2;
   width: 100%;
   text-align: center;
 }
-#about .bio .connect .social-media-icons {
+#about .bio-image .bio .connect .social-media-icons {
   display: inline;
   width: 5.5rem;
   height: 5.5rem;
@@ -187,11 +194,11 @@ header .navigation a:hover {
   padding: 1rem;
   margin: auto;
 }
-#about .bio .connect .social-media-icons img {
+#about .bio-image .bio .connect .social-media-icons img {
   width: 100%;
   height: 100%;
 }
-#about .images {
+#about .bio-image .images {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,62 +206,33 @@ header .navigation a:hover {
   max-width: 30rem;
   margin: auto;
 }
-#about .images img {
+#about .bio-image .images img {
   width: 30rem;
   height: 30rem;
   object-fit: cover;
 }
-#about .images .image-links {
+#about .bio-image .images .image-links {
   margin-block: 1rem;
   width: 100%;
 }
-#about .images .image-changer {
+#about .bio-image .images .image-changer {
   display: flex;
   flex-direction: row;
   width: 30rem;
 }
-#about .images .image-changer img {
+#about .bio-image .images .image-changer img {
   width: 4rem;
   height: 4rem;
   margin: auto;
   cursor: pointer;
 }
-#about .images .image-changer img:first-child {
+#about .bio-image .images .image-changer img:first-child {
   margin-left: 0;
 }
-#about .images .image-changer img:last-child {
+#about .bio-image .images .image-changer img:last-child {
   margin-right: 0;
 }
 
-@media (max-width: 954px) {
-  #about {
-    height: fit-content;
-    flex-direction: column;
-  }
-  #about .bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-inline: auto;
-    margin-block: 5rem;
-  }
-  #about .bio .bio-leng {
-    width: 70%;
-    max-width: 30rem;
-  }
-  #about .bio .bio-cont .conc {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  #about .images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 5rem auto;
-  }
-}
 #projects {
   display: flex;
   flex-direction: column;
