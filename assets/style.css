@@ -65,6 +65,7 @@ header .navigation .head {
   height: 98%;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 .home img {
   width: 90%;
@@ -109,6 +110,8 @@ header .navigation .head {
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
+  column-gap: 2rem;
+  padding-inline: 1rem;
 }
 #about .bio-image .bio {
   display: flex;
@@ -116,7 +119,7 @@ header .navigation .head {
   align-items: center;
   width: 100%;
   margin: auto;
-  flex-basis: 70%;
+  flex-basis: 50%;
 }
 #about .bio-image .bio .bio-leng {
   display: grid;
@@ -208,7 +211,7 @@ header .navigation .head {
   align-items: center;
   width: 90%;
   max-width: 30rem;
-  margin: auto;
+  margin-right: auto;
 }
 #about .bio-image .images img {
   width: 30rem;
@@ -237,6 +240,11 @@ header .navigation .head {
   margin-right: 0;
 }
 
+@media (max-width: 948px) {
+  #about > .bio-image > .images {
+    margin: auto;
+  }
+}
 #projects {
   display: flex;
   flex-direction: column;

@@ -21,6 +21,8 @@
     flex-wrap: wrap;
     align-items: flex-start;
     width: 100%;
+    column-gap: 2rem;
+    padding-inline: 1rem;
 
     .bio{
         display: flex;
@@ -28,7 +30,7 @@
         align-items: center;
         width: 100%;
         margin: auto;
-        flex-basis: 70%;
+        flex-basis: 50%;
 
         .bio-leng{
             display: grid;
@@ -133,15 +135,13 @@
     }
 
 
-
-
     .images{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%;
         max-width: 30rem;
-        margin: auto;
+        margin-right: auto;
 
         img{
             width: 30rem;
@@ -180,5 +180,9 @@
 
 
 
-
+}
+@media (max-width:948px) {
+    #about>.bio-image>.images{
+        margin: auto;
+    }
 }
