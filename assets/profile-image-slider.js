@@ -1,6 +1,6 @@
 function mouseOver(ev){
     ev.stopPropagation();
-    var audio = new Audio('./assets/boop.wav')
+    var audio = new Audio('./assets/tick.mp3')
     audio.play();
     if(ev.target.classList.contains('img-changer-item')){
         document.querySelector('.profile-image').setAttribute('src',ev.target.getAttribute('src'))
@@ -8,10 +8,8 @@ function mouseOver(ev){
     }
 }
 
+
 document.querySelectorAll('.img-changer-item').forEach(el=>{
-    // el.addEventListener('click',(ev)=>{
-    //     document.querySelector('.profile-image').setAttribute('src',el.getAttribute('src'))
-    // })
     el.addEventListener('mouseover',mouseOver)
 })
 document.querySelectorAll('.pnts').forEach(el=>{
@@ -39,14 +37,10 @@ points.forEach(el=>{
             }
         })
         ev.target.classList.add('selected-pnt');
+        var audio = new Audio('./assets/boop.wav')
+        audio.play();
     })
 })
 
 
-// THIS IS THE LAZY LOADING SECTION
-let options = {
-    root: document.querySelector('#root'),
-    rootMargin: '0px',
-    threshold: 1.0
-  }
 
